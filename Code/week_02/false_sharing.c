@@ -2,6 +2,7 @@
 #include <stdio.h>
 
 int main() {
+    omp_set_num_threads(5);
     int num_threads = omp_get_max_threads();
     // Assuming an int is 4 bytes, and a cache line is typically 64 bytes, each cache line can hold 16 ints.
     // To demonstrate false sharing, we use an array where each element is likely to be on the same cache line.

@@ -7,6 +7,7 @@ struct PaddedInt {
 };
 
 int main() {
+    omp_set_num_threads(4);
     int num_threads = omp_get_max_threads();
     struct PaddedInt data[num_threads];
 
